@@ -1,0 +1,20 @@
+{
+  "name": "pdf-merge-ai-mcp",
+  "description": "MEOK AI Labs \u2014 pdf-merge-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/pdf-merge-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "run"
+  ],
+  "categories": [
+    "Document Processing",
+    "PDF"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
