@@ -1,10 +1,37 @@
 name: pdf-merge-ai-mcp
-description: "MEOK AI Labs — pdf-merge-ai-mcp"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/pdf-merge-ai-mcp
-license: MIT
-categories: [Document Processing, PDF]
-tags: [pdf-merge, pdf-combine, pdf-split, pdf-manipulation]
-runtime: python
-entrypoint: server.py
+description: "pdf-merge-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+version: 1.0.0
+tools:
+- name: merge_pdfs
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: file_paths
+    type: string
+    required: true
+- name: split_pdf
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: file_path
+    type: string
+    required: true
+  - name: pages
+    type: string
+    required: true
+- name: get_pdf_info
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: file_path
+    type: string
+    required: true
+- name: extract_pages
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: file_path
+    type: string
+    required: true
+  - name: start
+    type: integer
+    required: true
+  - name: end
+    type: integer
+    required: true

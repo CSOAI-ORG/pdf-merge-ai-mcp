@@ -1,20 +1,79 @@
 {
   "name": "pdf-merge-ai-mcp",
-  "description": "MEOK AI Labs \u2014 pdf-merge-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/pdf-merge-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "pdf-merge-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Document Processing",
-    "PDF"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "merge_pdfs",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_paths": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_paths"
+        ]
+      }
+    },
+    {
+      "name": "split_pdf",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_path",
+          "pages"
+        ]
+      }
+    },
+    {
+      "name": "get_pdf_info",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_path"
+        ]
+      }
+    },
+    {
+      "name": "extract_pages",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          },
+          "start": {
+            "type": "integer"
+          },
+          "end": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "file_path",
+          "start",
+          "end"
+        ]
+      }
+    }
+  ]
 }
