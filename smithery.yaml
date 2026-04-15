@@ -1,5 +1,5 @@
 name: pdf-merge-ai-mcp
-description: "pdf-merge-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+description: "MEOK AI Labs \u2014 Merge and manipulate PDF files."
 version: 1.0.0
 tools:
 - name: merge_pdfs
