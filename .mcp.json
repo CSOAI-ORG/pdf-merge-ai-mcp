@@ -1,6 +1,6 @@
 {
   "name": "pdf-merge-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Merge and manipulate PDF files.",
+  "description": "AI-powered pdf merge ai MCP server for agents. Supports merge pdfs, split pdf, get pdf info. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
