@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/pdf-merge-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+pdf_merge_ai_mcp = "server:main"
