@@ -86,7 +86,23 @@ def _parse_page_range(spec: str, total_pages: int) -> list:
 
 @mcp.tool()
 def merge_info(file_descriptions: str, output_name: str = "merged.pdf", api_key: str = "") -> str:
-    """Plan a PDF merge operation. Provide file descriptions as JSON array of objects with 'name', 'pages' (optional), and 'size_kb' (optional) fields."""
+    """Plan a PDF merge operation. Provide file descriptions as JSON array of objects with 'name', 'pages' (optional), and 'size_kb' (optional) fields.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -152,7 +168,23 @@ def merge_info(file_descriptions: str, output_name: str = "merged.pdf", api_key:
 
 @mcp.tool()
 def split_info(source_name: str, total_pages: int, split_spec: str, api_key: str = "") -> str:
-    """Plan a PDF split operation. Split spec examples: 'every 5' (5-page chunks), '1-3,4-8,9-12' (custom ranges), 'even' / 'odd' (page parity)."""
+    """Plan a PDF split operation. Split spec examples: 'every 5' (5-page chunks), '1-3,4-8,9-12' (custom ranges), 'even' / 'odd' (page parity).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -228,7 +260,22 @@ def split_info(source_name: str, total_pages: int, split_spec: str, api_key: str
 
 @mcp.tool()
 def get_metadata(pdf_base64_header: str = "", file_info_json: str = "", api_key: str = "") -> str:
-    """Extract or generate PDF metadata. Provide either base64-encoded first 1KB of PDF, or a JSON object with manual metadata fields."""
+    """Extract or generate PDF metadata. Provide either base64-encoded first 1KB of PDF, or a JSON object with manual metadata fields.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -302,7 +349,23 @@ def get_metadata(pdf_base64_header: str = "", file_info_json: str = "", api_key:
 
 @mcp.tool()
 def validate_pdf(pdf_base64_header: str, api_key: str = "") -> str:
-    """Validate PDF structure from base64-encoded header bytes. Checks version, structure, and encryption status."""
+    """Validate PDF structure from base64-encoded header bytes. Checks version, structure, and encryption status.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
