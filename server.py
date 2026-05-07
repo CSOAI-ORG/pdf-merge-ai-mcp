@@ -102,6 +102,12 @@ def merge_info(file_descriptions: str, output_name: str = "merged.pdf", api_key:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        file_descriptions (str): The file descriptions to analyze or process.
+        output_name (str): The output name to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -198,6 +204,13 @@ def split_info(source_name: str, total_pages: int, split_spec: str, api_key: str
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        source_name (str): The source name to analyze or process.
+        total_pages (int): The total pages to analyze or process.
+        split_spec (str): The split spec to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -303,6 +316,12 @@ def get_metadata(pdf_base64_header: str = "", file_info_json: str = "", api_key:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        pdf_base64_header (str): The pdf base64 header to analyze or process.
+        file_info_json (str): The file info json to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -407,6 +426,11 @@ def validate_pdf(pdf_base64_header: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        pdf_base64_header (str): The pdf base64 header to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
