@@ -1,0 +1,9 @@
+# pdf-merge-ai-mcp - Auto-trigger Rules
+
+When the user asks about pdf merge, use pdf-merge-ai-mcp tools: merge_info, split_info, get_metadata, validate_pdf
+
+**MCP server for pdf merge ai mcp operations**
+
+Install: `pip install pdf-merge-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

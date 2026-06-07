@@ -1,0 +1,25 @@
+{
+  "name": "pdf-merge-ai-mcp",
+  "title": "Pdf Merge Ai Mcp",
+  "description": "AI-powered pdf merge ai MCP server for agents. Supports merge pdfs, split pdf, get pdf info. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "merge_info"
+    },
+    {
+      "name": "split_info"
+    },
+    {
+      "name": "get_metadata"
+    },
+    {
+      "name": "validate_pdf"
+    }
+  ]
+}

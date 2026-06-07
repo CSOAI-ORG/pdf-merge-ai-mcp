@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""PDF analysis, merge planning, split planning, and metadata extraction. — MEOK AI Labs."""
+"""
+PDF analysis, merge planning, split planning, and metadata extraction. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, hashlib, re
@@ -125,7 +125,7 @@ def merge_info(file_descriptions: str, output_name: str = "merged.pdf", api_key:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -228,7 +228,7 @@ def split_info(source_name: str, total_pages: int, split_spec: str, api_key: str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -339,7 +339,7 @@ def get_metadata(pdf_base64_header: str = "", file_info_json: str = "", api_key:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -448,7 +448,7 @@ def validate_pdf(pdf_base64_header: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl():
         return err
 
@@ -508,5 +508,8 @@ def validate_pdf(pdf_base64_header: str, api_key: str = "") -> str:
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

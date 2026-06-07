@@ -1,0 +1,33 @@
+# pdf-merge-ai-mcp
+# **MCP server for pdf merge ai mcp operations**
+
+## Install
+```bash
+pip install pdf-merge-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `merge_info`
+Plan a PDF merge operation. Provide file descriptions as JSON array of objects with 'name', 'pages' (optional), and 'size_kb' (optional) fields.
+
+### `split_info`
+Plan a PDF split operation. Split spec examples: 'every 5' (5-page chunks), '1-3,4-8,9-12' (custom ranges), 'even' / 'odd' (page parity).
+
+### `get_metadata`
+Extract or generate PDF metadata. Provide either base64-encoded first 1KB of PDF, or a JSON object with manual metadata fields.
+
+### `validate_pdf`
+Validate PDF structure from base64-encoded header bytes. Checks version, structure, and encryption status.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
