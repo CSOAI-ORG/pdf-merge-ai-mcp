@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 name = "pdf-merge-ai-mcp"
 version = "1.0.7"
 readme = "README.md"
-description = "AI-powered pdf merge ai MCP server for agents. Supports merge pdfs, split pdf, get pdf info. By MEOK AI Labs."
+description = "Pdf Merge Ai Mcp: merge info (Plan a PDF merge operation. Provide file descriptions as JSO); split info (Plan a PDF split operation. Split spec examples: 'every 5' (); get metadata (Extract or generate PDF metadata. Provide either base64-enco); validate pdf (Validate PDF structure from base64-encoded header bytes. Che). pip install pdf-merge-ai-mcp."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
