@@ -9,7 +9,7 @@ description = "Pdf Merge Ai Mcp: merge info (Plan a PDF merge operation. Provide
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
-dependencies = ["mcp>=1.0.0"]
+dependencies = ["mcp>=2.0.0"]
 keywords = ["mcp", "ai", "meok", "pdf", "merge"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/pdf-merge-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py", "auth_middleware.py"]
+only-include = ["server.py", "auth_middleware.py", "mcp2026_shim.py"]
 
 [project.scripts]
 pdf_merge_ai_mcp = "server:main"
